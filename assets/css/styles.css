@@ -115,6 +115,40 @@
 }
 
 html { overflow-x: hidden; width: 100%; }
+html.scroll-smooth { scroll-behavior: smooth; }
+.hidden { display: none !important; }
+
+/* Responsive utilities */
+@media (min-width: 768px) {
+    .md\:hidden { display: none !important; }
+    .md\:flex { display: flex !important; }
+    .md\:block { display: block !important; }
+    .md\:grid { display: grid !important; }
+    .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; }
+    .md\:grid-cols-12 { grid-template-columns: repeat(12, 1fr) !important; }
+    .md\:col-span-4 { grid-column: span 4 !important; }
+    .md\:col-span-5 { grid-column: span 5 !important; }
+    .md\:col-span-7 { grid-column: span 7 !important; }
+    .md\:col-span-8 { grid-column: span 8 !important; }
+}
+@media (min-width: 1024px) {
+    .lg\:col-span-5 { grid-column: span 5 !important; }
+    .lg\:col-span-7 { grid-column: span 7 !important; }
+    .lg\:grid-cols-12 { grid-template-columns: repeat(12, 1fr) !important; }
+}
+@media (min-width: 640px) {
+    .sm\:block { display: block !important; }
+    .sm\:flex { display: flex !important; }
+    .sm\:grid { display: grid !important; }
+    .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; }
+    .sm\:grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+    .sm\:flex-row { flex-direction: row !important; }
+    .sm\:items-center { align-items: center !important; }
+}
+body.antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 body {
     background-color: var(--surface-dim);
@@ -499,4 +533,77 @@ section[id] { position: relative; z-index: 10; }
 .entry-animate.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 767px) {
+    h1 { font-size: 1.75rem !important; line-height: 1.2 !important; }
+    h2 { font-size: 1.5rem !important; }
+
+    .nav-bg { backdrop-filter: blur(8px); }
+
+    /* Fix mobile menu */
+    #mobile-menu {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    /* Fix timeline on mobile */
+    .border-l.space-y-8 > div,
+    .border-l.space-y-12 > div {
+        padding-left: 1rem !important;
+    }
+
+    /* Fix about 3-col stat grid on very small screens */
+    @media (max-width: 480px) {
+        .sm\:grid-cols-3 {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    /* Fix experience cards */
+    .glow-card .flex-col {
+        gap: 0.5rem;
+    }
+
+    /* Fix project images */
+    .project-image-container {
+        height: 10rem !important;
+    }
+
+    /* Fix contact form spacing */
+    form.space-y-5 > div {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Fix footer stacking */
+    footer .flex-col {
+        text-align: center;
+    }
+}
+
+/* Fix dark mode toggle icon visibility */
+html.dark .dark\:hidden { display: none !important; }
+html:not(.dark) .dark\:block { display: none !important; }
+html:not(.dark) .dark\:hidden { display: inline !important; }
+
+/* Ensure body bg transitions smoothly */
+body {
+    background-color: var(--surface-dim);
+    color: var(--on-surface);
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Additional utilities */
+.inline-flex { display: inline-flex; }
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+@media (min-width: 768px) {
+    .md\:order-1 { order: 1; }
+    .md\:order-2 { order: 2; }
 }

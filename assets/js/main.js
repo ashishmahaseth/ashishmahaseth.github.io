@@ -48,8 +48,14 @@ class ThemeManager {
     }
     updateButtonIcon() {
         if (!this.themeToggle) return;
-        const moonIcon = this.themeToggle.querySelector('span.dark\\:hidden');
-        const sunIcon = this.themeToggle.querySelector('span.hidden');
+        const icons = this.themeToggle.querySelectorAll('span');
+        icons.forEach(icon => {
+            if (this.currentTheme === 'dark') {
+                icon.textContent = 'dark_mode';
+            } else {
+                icon.textContent = 'light_mode';
+            }
+        });
     }
 }
 
