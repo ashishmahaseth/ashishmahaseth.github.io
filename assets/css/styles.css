@@ -1383,3 +1383,16 @@ html:not(.dark) .dark\:hidden { display: inline !important; }
     margin-top: 8px;
     z-index: 100;
 }
+
+/* ============================================================
+   HIDDEN UNTIL LG (for contact button)
+   ============================================================ */
+.hidden-until-lg {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .hidden-until-lg {
+        display: inline-flex;
+    }
+}
