@@ -340,10 +340,10 @@ h1, h2, h3, h4, h5, h6 {
    ============================================================ */
 
 .pulse-node {
-    animation: pulse 2s infinite;
+    animation: pulse-glow 2s infinite;
 }
 
-@keyframes pulse {
+@keyframes pulse-glow {
     0%   { box-shadow: 0 0 0 0 rgba(var(--shadow-color), 0.55); }
     70%  { box-shadow: 0 0 0 10px rgba(var(--shadow-color), 0); }
     100% { box-shadow: 0 0 0 0 rgba(var(--shadow-color), 0); }
