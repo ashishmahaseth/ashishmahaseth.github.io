@@ -316,3 +316,62 @@
     });
   }
 })();
+
+/* ============================================================
+   TYPING EFFECT
+   ============================================================ */
+(function() {
+    const typedElement = document.getElementById('typed-text');
+    const cursorElement = document.getElementById('cursor');
+    if (!typedElement) return;
+    
+    const texts = [
+        'IT Support Engineer',
+        'MSP Specialist',
+        'Azure AD Expert',
+        'M365 Administrator',
+        'Endpoint Security Engineer'
+    ];
+    
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+    
+    function type() {
+        const currentText = texts[textIndex];
+        
+        if (isPaused) {
+            setTimeout(type, 1500);
+            isPaused = false;
+            isDeleting = true;
+            return;
+        }
+        
+        if (isDeleting) {
+            typedElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            
+            if (charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+                return;
+            }
+            setTimeout(type, 50);
+        } else {
+            typedElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            
+            if (charIndex === currentText.length) {
+                isPaused = true;
+                setTimeout(type, 100);
+                return;
+            }
+            setTimeout(type, 100);
+        }
+    }
+    
+    // Start typing after a short delay
+    setTimeout(type, 1000);
+})();

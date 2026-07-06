@@ -1296,3 +1296,17 @@ html:not(.dark) .dark\:hidden { display: inline !important; }
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
 }
+
+/* ============================================================
+   TYPING EFFECT
+   ============================================================ */
+.typing-cursor {
+    animation: blink 1s step-end infinite;
+    color: var(--primary-container);
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
