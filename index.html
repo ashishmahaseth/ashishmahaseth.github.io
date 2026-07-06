@@ -33,25 +33,28 @@
         <div class="flex-shrink-0 flex items-center space-x-2">
           <span class="material-symbols-outlined text-primary-container text-xl md:text-2xl">grid_view</span>
           <a href="#home" class="font-display font-bold text-sm md:text-lg tracking-wider text-text-primary uppercase">
-            ASHISH MAHASETH <span class="text-text-muted font-normal text-xs md:text-sm font-mono-labels">// IT</span>
+            ASHISH_MAHASETH <span class="text-text-muted font-normal text-xs md:text-sm font-mono-labels">// IT</span>
           </a>
         </div>
 
-        <!-- Desktop links -->
-        <div class="hidden md:flex items-center space-x-4">
+        <!-- Desktop nav links -->
+        <div class="hidden lg:flex items-center space-x-4">
           <a href="#experience" class="nav-link">EXPERIENCE</a>
           <a href="#about" class="nav-link">ABOUT</a>
           <a href="#skills" class="nav-link">SKILLS</a>
           <a href="#projects" class="nav-link">PROJECTS</a>
-          <a href="#contact" id="nav-contact-terminal" class="btn-secondary font-mono-labels text-xs px-3 py-2 inline-flex items-center space-x-1">
-            <span>$ bash init_contact</span><span class="terminal-cursor">█</span>
-          </a>
         </div>
 
-        <!-- Controls -->
+        <!-- Right controls -->
         <div class="flex items-center space-x-2 md:space-x-3">
-          <div class="palette-selector">
-            <button id="palette-toggle" class="p-2 md:p-2.5 rounded" title="Cycle color palette">
+          <!-- Theme toggle -->
+          <button id="theme-toggle" class="nav-control-btn" title="Toggle theme">
+            <span class="material-symbols-outlined text-lg md:text-xl">light_mode</span>
+          </button>
+
+          <!-- Palette toggle -->
+          <div class="palette-selector relative">
+            <button id="palette-toggle" class="nav-control-btn" title="Cycle color palette">
               <span class="material-symbols-outlined text-lg md:text-xl">palette</span>
             </button>
             <div id="palette-dropdown" class="palette-dropdown hidden">
@@ -74,10 +77,15 @@
             </div>
           </div>
 
-          <button id="theme-toggle" class="p-2 md:p-2.5 rounded" title="Toggle theme">
-            <span class="material-symbols-outlined text-lg md:text-xl">dark_mode</span>
-          </button>
-          <button id="mobile-menu-button" class="md:hidden p-2 rounded" title="Menu">
+          <!-- Contact terminal button (hidden on mobile) -->
+          <a href="#contact" id="nav-contact-terminal" class="hidden md:inline-flex nav-contact-btn">
+            <span class="text-primary-container">$</span>
+            <span>bash init_contact</span>
+            <span class="terminal-cursor">█</span>
+          </a>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-button" class="lg:hidden nav-control-btn" title="Menu">
             <span class="material-symbols-outlined text-xl">menu</span>
           </button>
         </div>
@@ -85,13 +93,13 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="md:hidden hidden border-t border-border-utility mx-4 rounded-b shadow-xl">
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-border-utility mx-4 rounded-b shadow-xl">
       <div class="px-4 py-3 space-y-1">
-        <a href="#experience" class="block py-3 text-sm">EXPERIENCE</a>
-        <a href="#about" class="block py-3 text-sm">ABOUT</a>
-        <a href="#skills" class="block py-3 text-sm">SKILLS</a>
-        <a href="#projects" class="block py-3 text-sm">PROJECTS</a>
-        <a href="#contact" class="block py-3 text-sm">$ bash init_contact</a>
+        <a href="#experience" class="block py-3 text-sm nav-link">EXPERIENCE</a>
+        <a href="#about" class="block py-3 text-sm nav-link">ABOUT</a>
+        <a href="#skills" class="block py-3 text-sm nav-link">SKILLS</a>
+        <a href="#projects" class="block py-3 text-sm nav-link">PROJECTS</a>
+        <a href="#contact" class="block py-3 text-sm nav-contact-btn-mobile">$ bash init_contact</a>
       </div>
     </div>
   </nav>

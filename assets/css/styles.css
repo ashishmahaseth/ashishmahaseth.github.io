@@ -1310,3 +1310,76 @@ html:not(.dark) .dark\:hidden { display: inline !important; }
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
 }
+
+/* ============================================================
+   NAV CONTROL BUTTONS (matching bibekmallik.com.np)
+   ============================================================ */
+.nav-control-btn {
+    background-color: transparent;
+    border: 1px solid var(--border-utility);
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: var(--primary-container);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-control-btn:hover {
+    background-color: var(--surface-container-high);
+    border-color: var(--primary-container);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+/* Contact terminal button (matches bibekmallik.com.np exactly) */
+.nav-contact-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: none;
+    background-color: var(--surface-container-high);
+    border: 1px solid var(--border-utility);
+    border-radius: 4px;
+    padding: 8px 14px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.nav-contact-btn:hover {
+    background-color: var(--primary-container);
+    border-color: var(--primary-container);
+    color: var(--on-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(var(--shadow-color), 0.3);
+}
+
+.nav-contact-btn-mobile {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-container);
+    padding: 0.75rem 0;
+    display: block;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-contact-btn-mobile:hover {
+    color: var(--text-primary);
+}
+
+/* Palette dropdown position fix */
+.palette-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    z-index: 100;
+}
