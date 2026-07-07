@@ -1423,3 +1423,8 @@ html:not(.dark) .dark\:hidden { display: inline !important; }
 #projects .glow-card > div:last-child .flex {
     margin-top: auto;
 }
+
+/* Fix: add md:grid-cols-3 */
+@media (min-width: 768px) {
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
+}
