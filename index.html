@@ -485,9 +485,9 @@
       <div class="w-16 h-1 bg-primary-container mt-3"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 auto-rows-fr">
       <!-- Email Migration -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">mail</span>
@@ -495,9 +495,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">migration_ops</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Email Migration</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Delivered 6 GoDaddy/cPanel-to-Microsoft 365 migrations for 25-to-150 mailboxes each — minimal downtime, zero data loss, and positive stakeholder feedback.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
@@ -509,7 +509,7 @@
       </div>
 
       <!-- Appointment Automation -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-green-900 to-teal-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">calendar_month</span>
@@ -517,9 +517,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">automation</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Appointment Automation</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Implemented Calendly-based scheduling automation for 5+ professional service clients — cut manual scheduling ~60%.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
@@ -531,7 +531,7 @@
       </div>
 
       <!-- M365 Admin -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-indigo-900 to-purple-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">admin_panel_settings</span>
@@ -539,9 +539,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">admin_ops</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">M365 Administration</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Administered Microsoft 365 tenant for 500+ users — managing licensing, SharePoint configuration, Teams policies, and Exchange Online across multi-department environments.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
@@ -553,7 +553,7 @@
       </div>
 
       <!-- Active Directory Management -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-cyan-900 to-blue-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">shield</span>
@@ -561,9 +561,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">ad_management</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Active Directory Management</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Managed on-prem AD and Azure AD environments — user provisioning, group policy enforcement, OU structuring, and conditional access policies for 500+ identities.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
@@ -575,7 +575,7 @@
       </div>
 
       <!-- Endpoint Security -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-red-900 to-orange-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">security</span>
@@ -583,9 +583,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">security_ops</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Endpoint Security</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Deployed and configured Microsoft Defender for Endpoint across 500+ devices — automated threat detection, remediation workflows, and security baseline compliance.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
@@ -597,7 +597,7 @@
       </div>
 
       <!-- Intune Deployment -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card">
+      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card flex flex-col">
         <div class="relative h-40 md:h-48 overflow-hidden project-image-container bg-gradient-to-br from-violet-900 to-fuchsia-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-5xl text-white mb-2">devices</span>
@@ -605,9 +605,9 @@
           </div>
           <div class="absolute top-3 left-3 bg-surface-container-high/90 border border-border-utility px-2.5 py-0.5 rounded font-mono-labels text-[9px] text-primary-container uppercase z-10">intune_deploy</div>
         </div>
-        <div class="p-5 md:p-6 space-y-3">
+        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
           <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Intune Deployment</h3>
-          <p class="text-text-muted text-xs leading-relaxed">
+          <p class="text-text-muted text-xs leading-relaxed flex-1">
             Led Microsoft Intune rollout for 500+ endpoints — device enrollment, compliance policies, app deployment, and Windows Autopilot provisioning for zero-touch deployment.
           </p>
           <div class="flex flex-wrap gap-2 pt-2">
