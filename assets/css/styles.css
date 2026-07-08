@@ -1503,3 +1503,30 @@ html:not(.dark) .dark\:hidden { display: inline !important; }
 @media (min-width: 768px) {
   .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr) !important; }
 }
+
+/* ============================================================
+   RESPONSIVE PROJECT CARDS
+   ============================================================ */
+@media (max-width: 640px) {
+    #projects .glow-card {
+        min-height: auto;
+    }
+    #projects .glow-card > div:first-child {
+        height: 120px;
+    }
+    #projects .glow-card .p-5 {
+        padding: 1rem;
+    }
+    #projects .glow-card h3 {
+        font-size: 0.9rem;
+    }
+    #projects .glow-card p {
+        font-size: 0.7rem;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    #projects .glow-card > div:first-child {
+        height: 140px;
+    }
+}
