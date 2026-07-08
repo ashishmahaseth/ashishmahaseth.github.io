@@ -1,5 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 
+
+
+/* ============================================================
+   LIGHT THEME PALETTES
+   ============================================================ */
+
+/* Palette 1 – Classic Blueprint (Light) */
+:root.light-theme[data-palette="1"] {
+    --surface-dim: #f0f7ff;
+    --background: #f0f7ff;
+    --surface-container: #ffffff;
+    --surface-container-low: #e8f1fc;
+    --surface-container-lowest: #dbe8f9;
+    --surface-container-high: #f8fbff;
+    --surface-container-highest: #c5ddf5;
+    --surface-bright: #ffffff;
+    --primary: #0369a1;
+    --primary-container: #0284c7;
+    --secondary: #b45309;
+    --border-utility: #93c5fd;
+    --text-primary: #0c1929;
+    --text-muted: #1e40af;
+    --on-surface: #1e3a5f;
+    --on-primary: #ffffff;
+    --grid-color: #1e40af;
+    --grid-opacity: 0.12;
+    --shadow-color: 3, 105, 161;
+}
+
+/* Palette 2 – High-Voltage Amber (Light) */
+:root.light-theme[data-palette="2"] {
+    --surface-dim: #fefcf8;
+    --background: #fefcf8;
+    --surface-container: #ffffff;
+    --surface-container-low: #fef7ee;
+    --surface-container-lowest: #fef3e2;
+    --surface-container-high: #fffaf5;
+    --surface-container-highest: #fde6c3;
+    --surface-bright: #ffffff;
+    --primary: #c2410c;
+    --primary-container: #ea580c;
+    --secondary: #b45309;
+    --border-utility: #fdba74;
+    --text-primary: #1c0a00;
+    --text-muted: #9a3412;
+    --on-surface: #431407;
+    --on-primary: #ffffff;
+    --grid-color: #c2410c;
+    --grid-opacity: 0.1;
+    --shadow-color: 194, 65, 12;
+}
+
+/* Palette 3 – Automation Terminal (Light) */
+:root.light-theme[data-palette="3"] {
+    --surface-dim: #f5fdf5;
+    --background: #f5fdf5;
+    --surface-container: #ffffff;
+    --surface-container-low: #edfced;
+    --surface-container-lowest: #e0f5e0;
+    --surface-container-high: #f8fef8;
+    --surface-container-highest: #bbf0bb;
+    --surface-bright: #ffffff;
+    --primary: #15803d;
+    --primary-container: #22c55e;
+    --secondary: #65a30d;
+    --border-utility: #86efac;
+    --text-primary: #052e16;
+    --text-muted: #166534;
+    --on-surface: #14532d;
+    --on-primary: #ffffff;
+    --grid-color: #15803d;
+    --grid-opacity: 0.1;
+    --shadow-color: 21, 128, 61;
+}
+
 /* ============================================================
    THEME SYSTEM – CSS Variables for Theming
    ============================================================ */
