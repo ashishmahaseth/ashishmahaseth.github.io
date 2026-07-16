@@ -18,7 +18,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Site CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=1784178871">
+  <link rel="stylesheet" href="assets/css/styles.css?v=1784179201">
 </head>
 <body class="antialiased">
 
@@ -37,23 +37,23 @@
       <div class="flex justify-between items-center h-16 md:h-20">
 
         <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center space-x-2">
+        <div class="flex-shrink-0 flex items-center space-x-2 z-10">
           <span class="material-symbols-outlined text-primary-container text-xl md:text-2xl">cloud</span>
           <a href="#home" class="font-display font-bold text-sm md:text-lg tracking-wider text-text-primary uppercase">
             ASHISH_MAHASETH <span class="text-text-muted font-normal text-xs md:text-sm font-mono-labels">// IT</span>
           </a>
         </div>
 
-        <!-- Desktop nav links (center aligned, shown from md up) -->
-        <div class="desktop-nav-links absolute left-1/2 -translate-x-1/2 items-center space-x-6 lg:space-x-8">
-          <a href="#experience" class="nav-link">EXPERIENCE</a>
-          <a href="#about" class="nav-link">ABOUT</a>
-          <a href="#skills" class="nav-link">SKILLS</a>
-          <a href="#projects" class="nav-link">PROJECTS</a>
+        <!-- Desktop nav links (center column, shown from md up) -->
+        <div class="desktop-nav-links flex-1 justify-center items-center space-x-5 lg:space-x-8 mx-4">
+          <a href="#experience" class="nav-link whitespace-nowrap">EXPERIENCE</a>
+          <a href="#about" class="nav-link whitespace-nowrap">ABOUT</a>
+          <a href="#skills" class="nav-link whitespace-nowrap">SKILLS</a>
+          <a href="#projects" class="nav-link whitespace-nowrap">PROJECTS</a>
         </div>
 
         <!-- Right controls -->
-        <div class="flex items-center space-x-2 md:space-x-3">
+        <div class="flex items-center space-x-2 md:space-x-3 flex-shrink-0 z-10">
           <!-- Theme toggle -->
           <button id="theme-toggle" class="nav-control-btn" title="Toggle theme">
             <span class="material-symbols-outlined text-lg md:text-xl">light_mode</span>
@@ -686,7 +686,7 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js?v=1784178871"></script>
+  <script src="assets/js/main.js?v=1784179201"></script>
 </body>
 </html>
 // Mon Jul  6 16:58:49 UTC 2026
