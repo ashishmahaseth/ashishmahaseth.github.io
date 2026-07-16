@@ -6,53 +6,53 @@
    LIGHT THEME PALETTES
    ============================================================ */
 
-/* Palette 1 – Classic Blueprint (Light) */
+/* Palette 1 – AWS Nitro (Light) */
 :root.light-theme[data-palette="1"] {
-    --surface-dim: #f0f7ff;
-    --background: #f0f7ff;
+    --surface-dim: #fff8f0;
+    --background: #fff8f0;
     --surface-container: #ffffff;
-    --surface-container-low: #e8f1fc;
-    --surface-container-lowest: #dbe8f9;
-    --surface-container-high: #f8fbff;
-    --surface-container-highest: #c5ddf5;
-    --surface-bright: #ffffff;
-    --primary: #0369a1;
-    --primary-container: #0284c7;
-    --secondary: #b45309;
-    --border-utility: #93c5fd;
-    --text-primary: #0c1929;
-    --text-muted: #1e40af;
-    --on-surface: #1e3a5f;
-    --on-primary: #ffffff;
-    --grid-color: #1e40af;
-    --grid-opacity: 0.12;
-    --shadow-color: 3, 105, 161;
-}
-
-/* Palette 2 – High-Voltage Amber (Light) */
-:root.light-theme[data-palette="2"] {
-    --surface-dim: #fefcf8;
-    --background: #fefcf8;
-    --surface-container: #ffffff;
-    --surface-container-low: #fef7ee;
-    --surface-container-lowest: #fef3e2;
+    --surface-container-low: #fff1e0;
+    --surface-container-lowest: #ffe6cc;
     --surface-container-high: #fffaf5;
-    --surface-container-highest: #fde6c3;
+    --surface-container-highest: #ffd9a8;
     --surface-bright: #ffffff;
-    --primary: #c2410c;
-    --primary-container: #ea580c;
+    --primary: #cc7a00;
+    --primary-container: #ff9900;
     --secondary: #b45309;
-    --border-utility: #fdba74;
-    --text-primary: #1c0a00;
-    --text-muted: #9a3412;
-    --on-surface: #431407;
+    --border-utility: #ffd9a8;
+    --text-primary: #1c0f00;
+    --text-muted: #9a5b12;
+    --on-surface: #431f05;
     --on-primary: #ffffff;
-    --grid-color: #c2410c;
-    --grid-opacity: 0.1;
-    --shadow-color: 194, 65, 12;
+    --grid-color: #cc7a00;
+    --grid-opacity: 0.12;
+    --shadow-color: 255, 153, 0;
 }
 
-/* Palette 3 – Automation Terminal (Light) */
+/* Palette 2 – Cloud Hybrid (Light) */
+:root.light-theme[data-palette="2"] {
+    --surface-dim: #f0fbfb;
+    --background: #f0fbfb;
+    --surface-container: #ffffff;
+    --surface-container-low: #e2f7f8;
+    --surface-container-lowest: #d2f0f2;
+    --surface-container-high: #f7fdfe;
+    --surface-container-highest: #b6ecf0;
+    --surface-bright: #ffffff;
+    --primary: #0e7490;
+    --primary-container: #06b6d4;
+    --secondary: #7c3aed;
+    --border-utility: #a5e9ef;
+    --text-primary: #00363d;
+    --text-muted: #0e7490;
+    --on-surface: #06505c;
+    --on-primary: #ffffff;
+    --grid-color: #0e7490;
+    --grid-opacity: 0.1;
+    --shadow-color: 6, 182, 212;
+}
+
+/* Palette 3 – Terminal Green (Light) */
 :root.light-theme[data-palette="3"] {
     --surface-dim: #f5fdf5;
     --background: #f5fdf5;
@@ -79,27 +79,27 @@
    THEME SYSTEM – CSS Variables for Theming
    ============================================================ */
 
-/* Default Theme – Grid Power (Palette 0) */
+/* Default Theme – Azure Cloud (Palette 0) */
 :root {
-    --surface-dim: #0b1326;
-    --background: #0b1326;
-    --surface-container: #171f33;
-    --surface-container-low: #131b2e;
+    --surface-dim: #0a1429;
+    --background: #0a1429;
+    --surface-container: #122041;
+    --surface-container-low: #0e1a36;
     --surface-container-lowest: #060e20;
-    --surface-container-high: #222a3d;
-    --surface-container-highest: #2d3449;
-    --surface-bright: #31394d;
-    --primary: #8ed5ff;
-    --primary-container: #38bdf8;
-    --secondary: #ffc640;
-    --border-utility: #334155;
-    --text-primary: #f8fafc;
-    --text-muted: #94a3b8;
-    --on-surface: #dae2fd;
-    --on-primary: #00354a;
-    --grid-color: #334155;
-    --grid-opacity: 0.12;
-    --shadow-color: 56, 189, 248;
+    --surface-container-high: #1a2d57;
+    --surface-container-highest: #22376b;
+    --surface-bright: #2b4784;
+    --primary: #4cc2ff;
+    --primary-container: #0078d4;
+    --secondary: #38bdf8;
+    --border-utility: #1e3a6b;
+    --text-primary: #f2f8ff;
+    --text-muted: #8fb3e0;
+    --on-surface: #d6e8ff;
+    --on-primary: #ffffff;
+    --grid-color: #0078d4;
+    --grid-opacity: 0.1;
+    --shadow-color: 0, 120, 212;
 }
 
 :root.light-theme {
@@ -124,53 +124,53 @@
     --shadow-color: 14, 165, 233;
 }
 
-/* Palette 1 – Classic Blueprint */
+/* Palette 1 – AWS Nitro */
 [data-palette="1"] {
-    --surface-dim: #081e3f;
-    --background: #081e3f;
-    --surface-container: #0c2b54;
-    --surface-container-low: #0a2549;
-    --surface-container-lowest: #05162e;
-    --surface-container-high: #123766;
-    --surface-container-highest: #194477;
-    --surface-bright: #1f4f89;
-    --primary: #ffffff;
-    --primary-container: #38bdf8;
-    --secondary: #fbbf24;
-    --border-utility: #254b7d;
-    --text-primary: #ffffff;
-    --text-muted: #93c5fd;
-    --on-surface: #e0f2fe;
-    --on-primary: #0c2b54;
-    --grid-color: #ffffff;
-    --grid-opacity: 0.08;
-    --shadow-color: 56, 189, 248;
+    --surface-dim: #1a0f02;
+    --background: #1a0f02;
+    --surface-container: #2b1a06;
+    --surface-container-low: #211405;
+    --surface-container-lowest: #0d0701;
+    --surface-container-high: #3a2410;
+    --surface-container-highest: #4d3015;
+    --surface-bright: #5c3a1c;
+    --primary: #ffac4b;
+    --primary-container: #ff9900;
+    --secondary: #ffb84d;
+    --border-utility: #4d3015;
+    --text-primary: #fff8f0;
+    --text-muted: #d6a877;
+    --on-surface: #ffe6c7;
+    --on-primary: #1a0f02;
+    --grid-color: #ff9900;
+    --grid-opacity: 0.1;
+    --shadow-color: 255, 153, 0;
 }
 
-/* Palette 2 – High-Voltage Amber */
+/* Palette 2 – Cloud Hybrid (Multi-cloud Teal/Violet) */
 [data-palette="2"] {
-    --surface-dim: #0a0a0c;
-    --background: #0a0a0c;
-    --surface-container: #141416;
-    --surface-container-low: #0e0e10;
-    --surface-container-lowest: #050506;
-    --surface-container-high: #1c1c1f;
-    --surface-container-highest: #252529;
-    --surface-bright: #303035;
-    --primary: #fb923c;
-    --primary-container: #f97316;
-    --secondary: #fbbf24;
-    --border-utility: #2d2d30;
-    --text-primary: #fafafa;
-    --text-muted: #a1a1aa;
-    --on-surface: #f4f4f5;
-    --on-primary: #0a0a0c;
-    --grid-color: #f97316;
-    --grid-opacity: 0.08;
-    --shadow-color: 249, 115, 22;
+    --surface-dim: #0a0f1a;
+    --background: #0a0f1a;
+    --surface-container: #111a2e;
+    --surface-container-low: #0d1525;
+    --surface-container-lowest: #05080f;
+    --surface-container-high: #18263f;
+    --surface-container-highest: #213350;
+    --surface-bright: #2c4063;
+    --primary: #2dd4bf;
+    --primary-container: #06b6d4;
+    --secondary: #a78bfa;
+    --border-utility: #1f3354;
+    --text-primary: #ecfdfb;
+    --text-muted: #7fa8b8;
+    --on-surface: #c7f5ef;
+    --on-primary: #04181a;
+    --grid-color: #06b6d4;
+    --grid-opacity: 0.1;
+    --shadow-color: 6, 182, 212;
 }
 
-/* Palette 3 – Automation Terminal (Laser Green) */
+/* Palette 3 – Terminal Green */
 [data-palette="3"] {
     --surface-dim: #050505;
     --background: #050505;
