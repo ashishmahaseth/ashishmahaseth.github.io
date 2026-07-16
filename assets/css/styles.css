@@ -344,6 +344,16 @@ h1, h2, h3, h4, h5, h6 {
 :root.light-theme .code-bg-scroll .cl-var { color: #0369a1; }               /* variables - dark blue */
 :root.light-theme .code-bg-scroll .cl-num { color: #c2410c; }               /* numbers - orange */
 
+/* Desktop centered nav links */
+.desktop-nav-links {
+    display: none;
+}
+@media (min-width: 768px) {
+    .desktop-nav-links {
+        display: flex;
+    }
+}
+
 /* ============================================================
    GRID OVERLAY BACKGROUND
    ============================================================ */
