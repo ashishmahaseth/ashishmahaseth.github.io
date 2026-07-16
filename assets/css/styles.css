@@ -330,11 +330,19 @@ h1, h2, h3, h4, h5, h6 {
     .code-bg-scroll { animation: none; }
 }
 
-/* Lighter opacity tuning for light theme so it stays subtle */
+/* Light theme: use dark, saturated code colors so it's clearly visible on light backgrounds */
 :root.light-theme .code-bg-scroll {
-    opacity: 0.24;
-    filter: blur(1.2px);
+    opacity: 0.6;
+    filter: blur(1px);
+    color: #0f4c81;
+    text-shadow: none;
 }
+:root.light-theme .code-bg-scroll .cl-key { color: #7c3aed; opacity: 1; }   /* keywords - purple */
+:root.light-theme .code-bg-scroll .cl-cmd { color: #b91c1c; }               /* cmdlets - red */
+:root.light-theme .code-bg-scroll .cl-str { color: #15803d; }               /* strings - dark green */
+:root.light-theme .code-bg-scroll .cl-com { color: #64748b; }               /* comments - slate */
+:root.light-theme .code-bg-scroll .cl-var { color: #0369a1; }               /* variables - dark blue */
+:root.light-theme .code-bg-scroll .cl-num { color: #c2410c; }               /* numbers - orange */
 
 /* ============================================================
    GRID OVERLAY BACKGROUND
