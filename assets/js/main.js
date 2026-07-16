@@ -302,17 +302,65 @@
   highlightActiveSection();
 
   /* ------------------------------------------------------------------ */
-  /*  11. Contact form handling                                         */
+  /*  11. Contact form handling (Formspree AJAX)                       */
   /* ------------------------------------------------------------------ */
   const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xojgjkgy';
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      showNotification(
-        'TRANSMISSION RECEIVED. MESSAGE LOGGED. (DEMO MODE)',
-        'success'
-      );
-      contactForm.reset();
+
+      // Basic client-side validation
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      // Show "transmitting" state
+      const originalBtn = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="material-symbols-outlined text-base">hourglass_empty</span><span>TRANSMITTING...</span>';
+      if (formStatus) {
+        formStatus.className = 'font-mono-labels text-xs tracking-wider rounded border px-4 py-3 mt-1 border-primary-container/40 text-primary-container';
+        formStatus.textContent = '> ESTABLISHING UPLINK TO FORMSPREE...';
+      }
+
+      try {
+        const response = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          showNotification('TRANSMISSION RECEIVED. MESSAGE DELIVERED TO ASHISH.', 'success');
+          if (formStatus) {
+            formStatus.className = 'font-mono-labels text-xs tracking-wider rounded border px-4 py-3 mt-1 border-emerald-500/50 text-emerald-400';
+            formStatus.textContent = '[OK] MESSAGE TRANSMITTED SUCCESSFULLY. I WILL RESPOND SHORTLY.';
+          }
+        } else {
+          const data = await response.json().catch(() => ({}));
+          const errMsg = data.errors ? data.errors.map(e => e.message).join(', ') : 'UNKNOWN UPLINK ERROR';
+          showNotification('TRANSMISSION FAILED. PLEASE RETRY.', 'error');
+          if (formStatus) {
+            formStatus.className = 'font-mono-labels text-xs tracking-wider rounded border px-4 py-3 mt-1 border-red-500/50 text-red-400';
+            formStatus.textContent = '[ERR] ' + errMsg;
+          }
+        }
+      } catch (error) {
+        showNotification('NETWORK ERROR. CHECK CONNECTION & RETRY.', 'error');
+        if (formStatus) {
+          formStatus.className = 'font-mono-labels text-xs tracking-wider rounded border px-4 py-3 mt-1 border-red-500/50 text-red-400';
+          formStatus.textContent = '[ERR] NETWORK FAILURE — MESSAGE NOT SENT.';
+        }
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtn;
+      }
     });
   }
 })();
