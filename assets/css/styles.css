@@ -296,9 +296,9 @@ h1, h2, h3, h4, h5, h6 {
     white-space: pre;
     color: var(--primary-container);
     /* Slight blur to avoid visual clutter */
-    filter: blur(1.6px);
-    opacity: 0.14;
-    animation: code-scroll 90s linear infinite;
+    filter: blur(1.4px);
+    opacity: 0.22;
+    animation: code-scroll 80s linear infinite;
     will-change: transform;
     text-shadow: 0 0 8px rgba(var(--shadow-color), 0.35);
 }
@@ -332,8 +332,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Lighter opacity tuning for light theme so it stays subtle */
 :root.light-theme .code-bg-scroll {
-    opacity: 0.09;
-    filter: blur(1.6px);
+    opacity: 0.14;
+    filter: blur(1.4px);
 }
 
 /* ============================================================
