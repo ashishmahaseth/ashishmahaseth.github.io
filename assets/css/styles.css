@@ -296,8 +296,8 @@ h1, h2, h3, h4, h5, h6 {
     white-space: pre;
     color: var(--primary-container);
     /* Slight blur to avoid visual clutter */
-    filter: blur(1.4px);
-    opacity: 0.22;
+    filter: blur(1.2px);
+    opacity: 0.38;
     animation: code-scroll 80s linear infinite;
     will-change: transform;
     text-shadow: 0 0 8px rgba(var(--shadow-color), 0.35);
@@ -320,8 +320,8 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at center, transparent 0%, var(--background) 78%),
-        linear-gradient(to bottom, var(--background) 0%, transparent 12%, transparent 88%, var(--background) 100%);
+        radial-gradient(ellipse at center, transparent 0%, transparent 40%, var(--background) 92%),
+        linear-gradient(to bottom, var(--background) 0%, transparent 8%, transparent 92%, var(--background) 100%);
     pointer-events: none;
 }
 
@@ -332,8 +332,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Lighter opacity tuning for light theme so it stays subtle */
 :root.light-theme .code-bg-scroll {
-    opacity: 0.14;
-    filter: blur(1.4px);
+    opacity: 0.24;
+    filter: blur(1.2px);
 }
 
 /* ============================================================
