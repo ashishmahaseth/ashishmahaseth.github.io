@@ -18,7 +18,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Site CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=1784178064">
+  <link rel="stylesheet" href="assets/css/styles.css?v=1784178722">
 </head>
 <body class="antialiased">
 
@@ -35,6 +35,7 @@
   <nav class="nav-bg sticky top-0 z-50" id="persistent-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16 md:h-20">
+
         <!-- Logo -->
         <div class="flex-shrink-0 flex items-center space-x-2">
           <span class="material-symbols-outlined text-primary-container text-xl md:text-2xl">cloud</span>
@@ -43,8 +44,8 @@
           </a>
         </div>
 
-        <!-- Desktop nav links -->
-        <div class="hidden lg:flex items-center space-x-4">
+        <!-- Desktop nav links (center aligned, shown from md up) -->
+        <div class="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center space-x-6 lg:space-x-8">
           <a href="#experience" class="nav-link">EXPERIENCE</a>
           <a href="#about" class="nav-link">ABOUT</a>
           <a href="#skills" class="nav-link">SKILLS</a>
@@ -90,8 +91,8 @@
             <span class="terminal-cursor">█</span>
           </a>
 
-          <!-- Mobile menu button -->
-          <button id="mobile-menu-button" class="nav-control-btn lg:hidden" title="Menu">
+          <!-- Mobile menu button (only on mobile) -->
+          <button id="mobile-menu-button" class="nav-control-btn md:hidden" title="Menu">
             <span class="material-symbols-outlined text-xl">menu</span>
           </button>
         </div>
@@ -99,7 +100,7 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="lg:hidden hidden border-t border-border-utility mx-4 rounded-b shadow-xl">
+    <div id="mobile-menu" class="md:hidden hidden border-t border-border-utility mx-4 rounded-b shadow-xl">
       <div class="px-4 py-3 space-y-1">
         <a href="#experience" class="block py-3 text-sm nav-link">EXPERIENCE</a>
         <a href="#about" class="block py-3 text-sm nav-link">ABOUT</a>
@@ -685,7 +686,7 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js?v=1784178064"></script>
+  <script src="assets/js/main.js?v=1784178722"></script>
 </body>
 </html>
 // Mon Jul  6 16:58:49 UTC 2026
