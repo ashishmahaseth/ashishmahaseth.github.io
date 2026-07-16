@@ -1,5 +1,5 @@
 /**
- * Ashish Shrestha — Portfolio main.js
+ * Ashish Mahaseth — Portfolio main.js
  * Dark/light theme, palette cycling, mobile menu, AOS, counters,
  * progress bars, back-to-top, smooth scroll, active nav, contact form.
  */
