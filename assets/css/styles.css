@@ -217,6 +217,16 @@ body.antialiased {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure page content sits above the code/grid background layers */
+main,
+nav,
+footer,
+#back-to-top {
+    position: relative;
+    z-index: 1;
+}
+nav#persistent-nav { z-index: 50; }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
     color: var(--text-primary);
@@ -259,6 +269,71 @@ h1, h2, h3, h4, h5, h6 {
     .lg\:col-span-5 { grid-column: span 5 !important; }
     .lg\:col-span-7 { grid-column: span 7 !important; }
     .lg\:grid-cols-12 { grid-template-columns: repeat(12, 1fr) !important; }
+}
+
+/* ============================================================
+   CODE / TERMINAL BACKGROUND
+   ============================================================ */
+
+.code-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--background);
+}
+
+.code-bg-scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3vw;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.9;
+    white-space: pre;
+    color: var(--primary-container);
+    /* Slight blur to avoid visual clutter */
+    filter: blur(1.6px);
+    opacity: 0.14;
+    animation: code-scroll 90s linear infinite;
+    will-change: transform;
+    text-shadow: 0 0 8px rgba(var(--shadow-color), 0.35);
+}
+
+.code-bg-scroll .cl-key { color: var(--primary); opacity: 0.9; }
+.code-bg-scroll .cl-cmd { color: var(--secondary); }
+.code-bg-scroll .cl-str { color: #7ee787; }
+.code-bg-scroll .cl-com { color: var(--text-muted); font-style: italic; }
+.code-bg-scroll .cl-var { color: var(--primary); }
+.code-bg-scroll .cl-num { color: var(--secondary); }
+
+@keyframes code-scroll {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
+}
+
+/* Vignette to fade edges so text stays readable */
+.code-bg-vignette {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at center, transparent 0%, var(--background) 78%),
+        linear-gradient(to bottom, var(--background) 0%, transparent 12%, transparent 88%, var(--background) 100%);
+    pointer-events: none;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .code-bg-scroll { animation: none; }
+}
+
+/* Lighter opacity tuning for light theme so it stays subtle */
+:root.light-theme .code-bg-scroll {
+    opacity: 0.09;
+    filter: blur(1.6px);
 }
 
 /* ============================================================

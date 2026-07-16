@@ -375,3 +375,64 @@
     // Start typing after a short delay
     setTimeout(type, 1000);
 })();
+
+/* ============================================================
+   CODE / TERMINAL BACKGROUND GENERATOR
+   PowerShell · Automation · Microsoft Graph · Scripting
+   ============================================================ */
+(function () {
+    const target = document.getElementById('code-bg-scroll');
+    if (!target) return;
+
+    // Realistic snippets from Ashish's stack. Tokens wrapped for highlight.
+    const lines = [
+        '<span class="cl-com"># Connect to Microsoft Graph</span>',
+        '<span class="cl-cmd">Connect-MgGraph</span> <span class="cl-key">-Scopes</span> <span class="cl-str">"User.ReadWrite.All","Group.ReadWrite.All"</span>',
+        '<span class="cl-var">$users</span> = <span class="cl-cmd">Get-MgUser</span> <span class="cl-key">-All</span> <span class="cl-key">-Property</span> DisplayName,UserPrincipalName,AccountEnabled',
+        '',
+        '<span class="cl-com"># Bulk provision new hires from CSV</span>',
+        '<span class="cl-cmd">Import-Csv</span> <span class="cl-str">".\\new_hires.csv"</span> | <span class="cl-key">ForEach-Object</span> {',
+        '    <span class="cl-cmd">New-MgUser</span> <span class="cl-key">-DisplayName</span> <span class="cl-var">$_.Name</span> <span class="cl-key">-UserPrincipalName</span> <span class="cl-var">$_.UPN</span> `',
+        '        <span class="cl-key">-AccountEnabled</span> <span class="cl-num">$true</span> <span class="cl-key">-MailNickname</span> <span class="cl-var">$_.Alias</span>',
+        '}',
+        '',
+        '<span class="cl-com"># Assign licenses via Graph</span>',
+        '<span class="cl-cmd">Set-MgUserLicense</span> <span class="cl-key">-UserId</span> <span class="cl-var">$user.Id</span> <span class="cl-key">-AddLicenses</span> @{ SkuId = <span class="cl-var">$e3Sku</span> } <span class="cl-key">-RemoveLicenses</span> @()',
+        '',
+        '<span class="cl-com"># Intune: get non-compliant devices</span>',
+        '<span class="cl-var">$devices</span> = <span class="cl-cmd">Get-MgDeviceManagementManagedDevice</span> <span class="cl-key">-Filter</span> <span class="cl-str">"complianceState eq \'noncompliant\'"</span>',
+        '<span class="cl-var">$devices</span> | <span class="cl-cmd">Select-Object</span> DeviceName, UserPrincipalName, OsVersion',
+        '',
+        '<span class="cl-com"># Automation: disable stale accounts (90+ days)</span>',
+        '<span class="cl-var">$cutoff</span> = (<span class="cl-cmd">Get-Date</span>).AddDays(<span class="cl-num">-90</span>)',
+        '<span class="cl-cmd">Get-MgUser</span> <span class="cl-key">-All</span> | <span class="cl-key">Where-Object</span> { <span class="cl-var">$_.SignInActivity.LastSignInDateTime</span> -lt <span class="cl-var">$cutoff</span> } |',
+        '    <span class="cl-key">ForEach-Object</span> { <span class="cl-cmd">Update-MgUser</span> <span class="cl-key">-UserId</span> <span class="cl-var">$_.Id</span> <span class="cl-key">-AccountEnabled</span> <span class="cl-num">$false</span> }',
+        '',
+        '<span class="cl-com"># Conditional Access report</span>',
+        '<span class="cl-cmd">Get-MgIdentityConditionalAccessPolicy</span> | <span class="cl-cmd">Select</span> DisplayName, State |',
+        '    <span class="cl-cmd">Export-Csv</span> <span class="cl-str">".\\CA_Policies.csv"</span> <span class="cl-key">-NoTypeInformation</span>',
+        '',
+        '<span class="cl-com"># Exchange Online: mailbox delegation audit</span>',
+        '<span class="cl-cmd">Get-Mailbox</span> <span class="cl-key">-ResultSize</span> Unlimited | <span class="cl-cmd">Get-MailboxPermission</span> |',
+        '    <span class="cl-key">Where-Object</span> { <span class="cl-var">$_.AccessRights</span> -match <span class="cl-str">"FullAccess"</span> -and -not <span class="cl-var">$_.IsInherited</span> }',
+        '',
+        '<span class="cl-com"># Power Automate trigger via Graph webhook</span>',
+        '<span class="cl-var">$body</span> = @{ changeType = <span class="cl-str">"created"</span>; resource = <span class="cl-str">"/users"</span>; expirationDateTime = <span class="cl-var">$exp</span> }',
+        '<span class="cl-cmd">Invoke-MgGraphRequest</span> <span class="cl-key">-Method</span> POST <span class="cl-key">-Uri</span> <span class="cl-str">"/subscriptions"</span> <span class="cl-key">-Body</span> <span class="cl-var">$body</span>',
+        '',
+        '<span class="cl-com"># Defender: isolate compromised endpoint</span>',
+        '<span class="cl-cmd">Invoke-MgGraphRequest</span> <span class="cl-key">-Method</span> POST `',
+        '    <span class="cl-key">-Uri</span> <span class="cl-str">"/security/machines/$id/isolate"</span> <span class="cl-key">-Body</span> @{ comment = <span class="cl-str">"Auto-remediation"</span> }',
+        '',
+        '<span class="cl-com"># Group membership sync loop</span>',
+        '<span class="cl-key">foreach</span> (<span class="cl-var">$g</span> <span class="cl-key">in</span> <span class="cl-var">$groups</span>) {',
+        '    <span class="cl-cmd">New-MgGroupMember</span> <span class="cl-key">-GroupId</span> <span class="cl-var">$g.Id</span> <span class="cl-key">-DirectoryObjectId</span> <span class="cl-var">$user.Id</span>',
+        '    <span class="cl-cmd">Write-Host</span> <span class="cl-str">"[OK] Added $($user.UPN) -> $($g.DisplayName)"</span> <span class="cl-key">-Fore</span> Green',
+        '}',
+        '',
+    ];
+
+    // Build a long block, duplicated for seamless -50% loop.
+    const block = lines.join('\n');
+    target.innerHTML = block + '\n' + block;
+})();
