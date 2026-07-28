@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
     /* Slight blur to avoid visual clutter */
     filter: blur(1.2px);
     opacity: 0.38;
-    animation: code-scroll 80s linear infinite;
+    animation: code-scroll 28s linear infinite;
     will-change: transform;
     text-shadow: 0 0 8px rgba(var(--shadow-color), 0.35);
 }
