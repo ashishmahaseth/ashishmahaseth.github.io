@@ -223,6 +223,22 @@
   initFooterUptime();
 
   /* ------------------------------------------------------------------ */
+  /*  7a. Accordion toggle for previous roles                          */
+  /* ------------------------------------------------------------------ */
+  document.querySelectorAll('.accordion-toggle').forEach((btn) => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-accordion-toggle');
+      const content = document.getElementById(targetId);
+      if (!content) return;
+      const icon = this.querySelector('span.material-symbols-outlined');
+      const isOpen = !content.classList.contains('hidden');
+      content.classList.toggle('hidden', isOpen);
+      if (icon) icon.textContent = isOpen ? 'expand_more' : 'expand_less';
+    });
+  });
+
+  /* ------------------------------------------------------------------ */
   /*  7. Progress bar animations  (data-width attribute)                */
   /* ------------------------------------------------------------------ */
   const skillItems = document.querySelectorAll('.skill-item');
