@@ -17,7 +17,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="../assets/css/styles.css?v=1785254000">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=1785255000">
 </head>
 <body class="antialiased">
 
@@ -133,148 +133,95 @@
     </div>
   </section>
 
-  <!-- Certifications Grid with Thumbnail Previews -->
-  <section class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 border-t border-border-utility/40">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
+  <!-- Thumbnail Grid -->
+  <section class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 border-t border-border-utility/40 pb-24">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
-      <!-- CISM Bundle (Hero) -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card group flex flex-col">
-        <div class="relative">
-          <img src="../assets/img/certs/cism_bundle.png" alt="CISM 2022 Certification Bundle" class="w-full h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-          <div class="absolute top-3 right-3 bg-surface-container-high/90 border border-border-utility px-2 py-0.5 rounded font-mono-labels text-[8px] text-text-muted uppercase z-10">
-            Hover to Preview
+      <!-- CISM Bundle -->
+      <div class="group cursor-pointer" data-aos="fade-up">
+        <div class="relative bg-surface-container border border-border-utility rounded overflow-hidden glow-card aspect-[4/3]">
+          <img src="../assets/img/certs/cism_bundle.png" alt="CISM 2022 Bundle" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="text-white font-display text-sm font-bold">CISM 2022</div>
+              <div class="text-[9px] text-white/70">8 Modules</div>
+            </div>
           </div>
         </div>
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-          <span class="material-symbols-outlined text-white text-4xl mb-2">visibility</span>
-          <div class="text-xs text-white/80">Preview all 8 CISM modules</div>
-          <button onclick="openLightbox(this)" data-full="../assets/img/certs/cism_bundle.png" class="mt-2 px-3 py-1 text-[10px] font-mono-labels text-primary-container bg-primary-container/10 border border-primary-container/30 rounded hover:bg-primary-container/20 transition">
-            VIEW FULL PREVIEW
-          </button>
-        </div>
-        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-base md:text-lg text-text-primary">CISM 2022 Certification Bundle</h3>
-          <p class="text-text-muted text-xs leading-relaxed flex-1">
-            Completed all 8 CISM 2022 modules covering Business Continuity, Access Control, Authentication, Risk Management, Network Security Attacks, IT Service availability, Network Attack Mitigation.
-          </p>
-          <div class="flex flex-wrap gap-1.5 mb-2">
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">CISM</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">8 Modules</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">ISACA</span>
-          </div>
-          <div class="text-[10px] font-mono-labels text-text-muted mt-auto">Cert IDs: 1467601–1467608 · Apr–Jun 2026</div>
+        <div class="text-center mt-2">
+          <div class="font-display text-xs font-bold text-text-primary">CISM 2022 Bundle</div>
+          <div class="text-[9px] font-mono-labels text-text-muted">8 certificates · Apr–Jun 2026</div>
         </div>
       </div>
 
       <!-- MS-102 -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card group flex flex-col">
-        <div class="relative">
-          <img src="../assets/img/certs/ms102_users_groups.png" alt="MS-102 Managing Users & Groups" class="w-full h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-          <button onclick="openLightbox(this)" data-full="../assets/img/certs/ms102_users_groups.png" class="px-3 py-1 text-[10px] font-mono-labels text-primary-container bg-primary-container/10 border border-primary-container/30 rounded hover:bg-primary-container/20 transition">
-            VIEW FULL PREVIEW
-          </button>
-        </div>
-        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-base md:text-lg text-text-primary">MS-102: Managing Users &amp; Groups</h3>
-          <p class="text-text-muted text-xs leading-relaxed flex-1">
-            Microsoft 365 security and identity administration — user lifecycle, group management, licensing, and access control.
-          </p>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">MS-102</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">M365</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Security</span>
+      <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="80">
+        <div class="relative bg-surface-container border border-border-utility rounded overflow-hidden glow-card aspect-[4/3]">
+          <img src="../assets/img/certs/ms102_users_groups.png" alt="MS-102 Certificate" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="text-white font-display text-sm font-bold">MS-102</div>
+              <div class="text-[9px] text-white/70">Microsoft 365</div>
+            </div>
           </div>
-          <div class="text-[10px] font-mono-labels text-text-muted mt-auto">Cert #1370910 · Aug 22, 2026</div>
+        </div>
+        <div class="text-center mt-2">
+          <div class="font-display text-xs font-bold text-text-primary">MS-102</div>
+          <div class="text-[9px] font-mono-labels text-text-muted">Managing Users &amp; Groups</div>
         </div>
       </div>
 
       <!-- Digital Marketing -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card group flex flex-col">
-        <div class="relative">
-          <img src="../assets/img/certs/digital_marketing.png" alt="Digital Marketing Fundamentals" class="w-full h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-          <button onclick="openLightbox(this)" data-full="../assets/img/certs/digital_marketing.png" class="px-3 py-1 text-[10px] font-mono-labels text-primary-container bg-primary-container/10 border border-primary-container/30 rounded hover:bg-primary-container/20 transition">
-            VIEW FULL PREVIEW
-          </button>
-        </div>
-        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Digital Marketing Fundamentals</h3>
-          <p class="text-text-muted text-xs leading-relaxed flex-1">
-            Google Digital Garage certification covering SEO, SEM, social media marketing, data analytics, and digital strategy.
-          </p>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">SEO</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">SEM</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Analytics</span>
+      <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="160">
+        <div class="relative bg-surface-container border border-border-utility rounded overflow-hidden glow-card aspect-[4/3]">
+          <img src="../assets/img/certs/digital_marketing.png" alt="Digital Marketing Certificate" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="text-white font-display text-sm font-bold">Digital Marketing</div>
+              <div class="text-[9px] text-white/70">Google Digital Garage</div>
+            </div>
           </div>
-          <div class="text-[10px] font-mono-labels text-text-muted mt-auto">Google Digital Garage · Mar 5, 2020</div>
+        </div>
+        <div class="text-center mt-2">
+          <div class="font-display text-xs font-bold text-text-primary">Digital Marketing</div>
+          <div class="text-[9px] font-mono-labels text-text-muted">Google Digital Garage</div>
         </div>
       </div>
 
       <!-- Python -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card group flex flex-col">
-        <div class="relative h-40 md:h-48 overflow-hidden bg-gradient-to-br from-indigo-900 to-purple-700 flex items-center justify-center">
+      <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="240">
+        <div class="relative bg-surface-container border border-border-utility rounded overflow-hidden glow-card aspect-[4/3] bg-gradient-to-br from-indigo-900 to-purple-700 flex items-center justify-center">
           <div class="text-center z-10">
             <span class="material-symbols-outlined text-4xl text-white mb-2">code</span>
             <div class="font-mono-labels text-xs text-indigo-200 uppercase tracking-wider">SoloLearn</div>
           </div>
         </div>
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-          <div class="text-xs text-white/80">Certificate #1073-18185487</div>
-        </div>
-        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Python 3 Tutorial</h3>
-          <p class="text-text-muted text-xs leading-relaxed flex-1">
-            Completed the Python 3 programming tutorial covering syntax, data structures, functions, OOP, and automation scripting.
-          </p>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Python</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Scripting</span>
-          </div>
-          <div class="text-[10px] font-mono-labels text-text-muted mt-auto">SoloLearn · May 1, 2020</div>
+        <div class="text-center mt-2">
+          <div class="font-display text-xs font-bold text-text-primary">Python 3</div>
+          <div class="text-[9px] font-mono-labels text-text-muted">SoloLearn Certificate</div>
         </div>
       </div>
 
       <!-- Civil Work -->
-      <div class="bg-surface-container border border-border-utility rounded overflow-hidden glow-card group flex flex-col">
-        <div class="relative">
-          <img src="../assets/img/certs/civil_work.png" alt="Civil Work Certification" class="w-full h-48 md:h-56 object-cover object-center group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4 text-center">
-          <button onclick="openLightbox(this)" data-full="../assets/img/certs/civil_work.png" class="px-3 py-1 text-[10px] font-mono-labels text-primary-container bg-primary-container/10 border border-primary-container/30 rounded hover:bg-primary-container/20 transition">
-            VIEW FULL PREVIEW
-          </button>
-        </div>
-        <div class="p-5 md:p-6 space-y-3 flex flex-col flex-1">
-          <h3 class="font-display font-bold text-base md:text-lg text-text-primary">Civil Work Certification</h3>
-          <p class="text-text-muted text-xs leading-relaxed flex-1">
-            Civil works certification covering construction standards, project documentation, and field engineering practices.
-          </p>
-          <div class="flex flex-wrap gap-1.5">
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Civil</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Construction</span>
-            <span class="px-2 py-0.5 bg-surface-container-high border border-border-utility rounded font-mono-labels text-[9px] text-text-muted uppercase">Field Engineering</span>
+      <div class="group cursor-pointer" data-aos="fade-up" data-aos-delay="320">
+        <div class="relative bg-surface-container border border-border-utility rounded overflow-hidden glow-card aspect-[4/3]">
+          <img src="../assets/img/certs/civil_work.png" alt="Civil Work Certificate" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute bottom-3 left-3 right-3">
+              <div class="text-white font-display text-sm font-bold">Civil Work</div>
+              <div class="text-[9px] text-white/70">PMQC</div>
+            </div>
           </div>
-          <div class="text-[10px] font-mono-labels text-text-muted mt-auto">PMQC · Cert #PMQCCW5618 · Oct 19, 2021</div>
+        </div>
+        <div class="text-center mt-2">
+          <div class="font-display text-xs font-bold text-text-primary">Civil Work</div>
+          <div class="text-[9px] font-mono-labels text-text-muted">PMQC Certification</div>
         </div>
       </div>
     </div>
   </section>
 
   </main>
-
-  <!-- Lightbox Modal -->
-  <div id="cert-lightbox" class="fixed inset-0 bg-black/90 backdrop-blur-sm flex items-center justify-center z-[100] opacity-0 invisible transition-all duration-300">
-    <div class="relative max-w-5xl max-h-[90vh] mx-4">
-      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded" />
-      <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white hover:text-gray-300 transition">
-        <span class="material-symbols-outlined text-3xl">close</span>
-      </button>
-    </div>
-  </div>
 
   <!-- Footer -->
   <footer class="relative z-10 border-t border-border-utility bg-surface-container-lowest">
@@ -302,24 +249,6 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="../assets/js/main.js?v=1785254000"></script>
-  <script>
-    function openLightbox(btn) {
-      const img = btn.getAttribute('data-full');
-      document.getElementById('lightbox-img').src = img;
-      const modal = document.getElementById('cert-lightbox');
-      modal.classList.remove('opacity-0', 'invisible');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      const modal = document.getElementById('cert-lightbox');
-      modal.classList.add('opacity-0', 'invisible');
-      document.getElementById('lightbox-img').src = '';
-      document.body.style.overflow = '';
-    }
-    document.getElementById('cert-lightbox').addEventListener('click', function(e) {
-      if (e.target === this) closeLightbox();
-    });
-  </script>
+  <script src="../assets/js/main.js?v=1785255000"></script>
 </body>
 </html>
