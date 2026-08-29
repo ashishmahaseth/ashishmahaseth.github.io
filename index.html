@@ -18,7 +18,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <!-- Site CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=1785266000">
+  <link rel="stylesheet" href="assets/css/styles.css?v=1785267000">
 </head>
 <body class="antialiased">
 
@@ -92,6 +92,16 @@
             <span class="terminal-cursor">█</span>
           </a>
 
+          <!-- WES Verification Badge (fixed in nav right corner) -->
+          <div id="wes-nav-badge" class="hidden-until-lg">
+            <div class="relative w-[150px] h-[160px] bg-surface-container border border-border-utility rounded overflow-hidden shadow-lg shadow-secondary/20">
+              <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5645e6f7-1feb-41e7-9264-a58a65e81e6b" data-share-badge-host="https://www.credly.com"></div>
+              <div class="absolute bottom-0 left-0 right-0 bg-surface-container-high/90 text-center py-1">
+                <span class="text-[7px] font-mono-labels text-secondary uppercase tracking-wider">WES Verified</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Mobile menu button (only on mobile) -->
           <button id="mobile-menu-button" class="nav-control-btn md:hidden" title="Menu">
             <span class="material-symbols-outlined text-xl">menu</span>
@@ -112,19 +122,6 @@
       </div>
     </div>
   </nav>
-
-  <!-- WES Verification Badge (top-right corner overlay) -->
-  <div class="fixed top-4 right-4 z-[9999] xl:inline-block">
-    <div class="w-[170px] bg-surface-container border-2 border-secondary rounded overflow-hidden shadow-xl shadow-secondary/20">
-      <div class="absolute top-0 left-0 right-0 h-1 bg-secondary z-[-1]"></div>
-      <div class="p-1">
-        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5645e6f7-1feb-41e7-9264-a58a65e81e6b" data-share-badge-host="https://www.credly.com" id="wes-credly-badge"></div>
-        <div class="text-center mt-1">
-          <span class="text-[8px] font-mono-labels text-secondary uppercase tracking-wider">WES Verified</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <main>
 
@@ -775,7 +772,7 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/main.js?v=1785266000"></script>
+  <script src="assets/js/main.js?v=1785267000"></script>
   <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 </body>
 </html>
